@@ -1,0 +1,39 @@
+body {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.feature-item-caption {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.feature-item-caption-white {
+  color: #ffffff;
+}
+
+.feature-item-caption-black {
+  color: #000000;
+}
+
+.hotels-caption {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.catalog-item-caption {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1.24;
+  color: #000000;
+}
