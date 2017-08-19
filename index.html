@@ -39,7 +39,7 @@
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </li>
           <li class="feature-item">
-            <h3>Еда</h3>
+            <h3 class="feature-item-caption feature-item-caption-black">Еда</h3>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="feature-item">
@@ -98,13 +98,13 @@
     </footer>
     <section class="modal modal-search">
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>Дата заезда: <input class="date-in" type="text" name="date-in" placeholder="24 апреля 2017"></p>
-        <p>Дата выезда: <input class="date-out" type="text" name="date-out" placeholder="4 июля 2017"></p>
-        <p>Взрослые: <input class="adult-number" type="number" name="adult" placeholder="2"></p>
-        <p>Дети: <input class="children-number" type="number" name="children" placeholder="0"></p>
+        <p><label for="date-in">Дата заезда:</label> <input class="date-in" id="date-in" type="text" name="date-in" placeholder="24 апреля 2017"></p>
+        <p><label for="date-out">Дата выезда:</label> <input class="date-out" id="date-out" type="text" name="date-out" placeholder="4 июля 2017"></p>
+        <p><label for="adult-number">Взрослые:</label> <input class="adult-number" id="adult-number" type="number" name="adult" placeholder="2"></p>
+        <p><label for="children-number">Дети:</label> <input class="children-number" id="children-number" type="number" name="children" placeholder="0"></p>
         <button type="submit" class="filter-button button">Найти</button>
       </form>
-      <span class="modal-close">x</span>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
