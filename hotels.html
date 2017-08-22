@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -58,14 +60,16 @@
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
-            <output name="priceoutput">3000</output>
-            <input type="range" name="pricecount" min="0" max="6000" step="100">
+            <div class="prices">
+              <label for="min-price">От</label><input type="text" name="min-price" id="min-price" placeholder="0">
+              <label for="max-price">До</label><input type="text" name="max-price" id="max-price" placeholder="3000">
+            </div>
             <button type="submit" class="filter-button button">Показать</button>
           </fieldset>
         </form>
         <div class="sorting">
           <h3>Найдено: 3</h3>
-          <p>Сортировка: <a href="#">по цене</a> <a href="#">по типу</a> <a href="#">по рейтингу</a></p>
+          <p>Сортировка: <a class="sorting-active" href="#">по цене</a> <a href="#">по типу</a> <a href="#">по рейтингу</a></p>
         </div>
         <ul class ="catalog-list">
           <li class="catalog-item">
@@ -77,8 +81,8 @@
             </a>
             <p class="catalog-item-price">
               Гостиница от 4000 р.
-              <a class="button" href="#">Подробнее</a>
-              <a class="button" href="#">Забронировать</a>
+              <a class="button button-more" href="#">Подробнее</a>
+              <a class="button button-book" href="#">Забронировать</a>
             </p>
             <p class="catalog-item-stars">
               <img src="img/star.svg" width="18" height="17" alt="*">
@@ -99,8 +103,8 @@
             </a>
             <p class="catalog-item-price">
               Мотель от 3000 р.
-              <a class="button" href="#">Подробнее</a>
-              <a class="button" href="#">Забронировать</a>
+              <a class="button button-more" href="#">Подробнее</a>
+              <a class="button button-book" href="#">Забронировать</a>
             </p>
             <p class="catalog-item-stars">
               <img src="img/star.svg" width="18" height="17" alt="*">
@@ -120,8 +124,8 @@
             </a>
             <p class="catalog-item-price">
               Гостиница от 2000 р.
-              <a class="button" href="#">Подробнее</a>
-              <a class="button" href="#">Забронировать</a>
+              <a class="button button-more" href="#">Подробнее</a>
+              <a class="button button-book" href="#">Забронировать</a>
             </p>
             <p class="catalog-item-stars">
               <img src="img/star.svg" width="18" height="17" alt="*">
