@@ -81,19 +81,33 @@ a.site-nav-current:active {
   list-style: none;
 }
 
-.feature-item-caption {
+.feature-item {
+  text-align: center;
+}
+
+.feature-item h3 {
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
-  line-height: 1;
+  line-height: 21px;
+  color: #000000;
 }
 
-.feature-item-caption-white {
+.feature-item-blue,
+.feature-item-blue h3 {
   color: #ffffff;
 }
 
-.feature-item-caption-black {
-  color: #000000;
+.feature-item-blue {
+  background-color: #81b3d2;
+}
+
+.feature-item-grey {
+  background-color: #eeeeee;
+}
+
+.feature-item-white {
+  background-color: #ffffff;
 }
 
 .hotels {
@@ -301,6 +315,21 @@ footer {
 
 .footer-social ul {
   list-style: none;
+}
+
+.logo-htmlacademy {
+  width: 115px;
+  height: 41px;
+  fill: #231f20;
+}
+
+.logo-htmlacademy:hover {
+  fill: #81b3d2;
+}
+
+.logo-htmlacademy:active {
+  fill: #bdbbbc;
+  opacity: 0.3;
 }
 
 .modal-search {
