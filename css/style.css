@@ -13,7 +13,7 @@ body {
   background-color: #f2f2f2;
 }
 
-/*.visually-hidden {
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -24,13 +24,22 @@ body {
 
   clip: rect(0 0 0 0);
   overflow: hidden;
-}*/
+}
 
 a {
   text-decoration: none;
 }
 
+header {
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .main-nav {
+  position: relative;
+  min-height: 56px;
+
   line-height: 26px;
   font-weight: 700;
   color: #000000;
@@ -38,8 +47,46 @@ a {
   background-color: #ffffff;
 }
 
+.main-header-logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 69px);
+}
+
 .site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 0;
+
   list-style: none;
+}
+
+.site-nav li {
+  width: 20%;
+}
+
+.site-nav li:first-of-type {
+  margin-left: 6%;
+  margin-right: 0;
+}
+
+.site-nav li:nth-of-type(3){
+  margin-left: 8%;
+  margin-right: 0;
+
+  text-align: right;
+}
+
+.site-nav li:last-of-type {
+  margin-left: 0;
+  margin-right: 6%;
+
+  text-align: right;
 }
 
 .site-nav a,
@@ -62,19 +109,53 @@ a.site-nav-current:active {
   color: #766357;
 }
 
+.intro {
+  text-align: center;
+  padding-bottom: 52px;
+
+  background-color: #ffffff;
+}
+
 .intro b {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding: 0 0;
+  width: 450px;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
-.intro {
-  background-color: #ffffff;
+.intro p {
+  margin: 0 auto;
+  padding: 0 0;
+  line-height: 26px;
 }
 
-.intro p {
-  line-height: 26px;
+.intro::before {
+  content: "";
+  display: block;
+  min-width: 768px;
+  max-width: 1200px;
+  height: 510px;
+  margin-bottom: 63px;
+
+  background-color: #81b3d2;
+  background-image: url("../img/intro-text.png"),
+                    url("../img/intro-shape.png"),
+                    url("../img/intro-bg.jpg");
+  background-size: auto auto,
+                   contain,
+                   cover;
+  background-position: 50% 76px,
+                       50% 100%,
+                       50% 50%;
+  background-repeat: no-repeat,
+                     no-repeat,
+                     no-repeat;
 }
 
 .features-list {
@@ -145,17 +226,43 @@ a.hotel-search:active {
   background-color: #503e33;
 }
 
+.container {
+  margin: 0 auto;
+  min-width: 768px;
+  max-width: 1200px;
+}
+
 .filter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 29px;
+
   color: #ffffff;
 
   background-color: #81b3d2;
   background-image: url("../img/filter-bg.jpg");
-  background-position: 0 0;
+  background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
 .filter fieldset {
+  padding: 0 0;
   border: none;
+}
+
+.filter fieldset:first-of-type {
+  min-width: 150px;
+  margin-left: 6%;
+}
+
+.filter fieldset:nth-of-type(2) {
+  min-width: 150px;
+}
+
+.filter fieldset:last-of-type {
+  margin-right: 6%;
+  max-width: 318px;
 }
 
 .filter ul {
@@ -177,6 +284,7 @@ a.hotel-search:active {
 }
 
 .prices {
+  min-width: 218px;
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
@@ -303,23 +411,94 @@ a.sorting-active {
 }
 
 footer {
-  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 120px;
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background-color: rgba(254, 254, 254, 0.9);
 }
 
 .footer-hashtag {
+  width: 33%;
+  text-align: center;
+  margin: 0 0;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
+.footer-social {
+  width: 33%;
+  text-align: center;
+  margin: 0 0;
+}
+
 .footer-social ul {
+  display: flex;
+  justify-content: center;
+  padding: 0 0;
+  margin: 0 0;
+
+  font-size: 0;
   list-style: none;
+}
+
+.footer-social li{
+  margin-right: 6px;
+}
+
+.footer-social li:last-of-type {
+  margin-right: 0;
+}
+
+.social-button {
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  background-color: #81b3d2;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.social-button-tw {
+  background-image: url("../img/twitter.svg");
+}
+
+.social-button-fb {
+  background-image: url("../img/fb-icon.svg");
+}
+
+.social-button-yt {
+  background-image: url("../img/youtube.svg");
+}
+
+.social-button:hover {
+  background-color:  #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+
+.footer-copyright {
+  width: 33%;
+  text-align: center;
+  margin: 0 0;
 }
 
 .logo-htmlacademy {
   width: 115px;
   height: 41px;
+  margin-left: 6px;
+  vertical-align: middle;
+
   fill: #231f20;
 }
 
