@@ -152,21 +152,96 @@ a.site-nav-current:active {
                    cover;
   background-position: 50% 76px,
                        50% 100%,
-                       50% 50%;
+                       50% 0;
   background-repeat: no-repeat,
                      no-repeat,
                      no-repeat;
 }
 
 .features-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0;
+
   list-style: none;
+  background-color: #eeeeee;
+}
+
+.extra-features {
+  display: flex;
+  justify-content: center;
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0;
+
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.features-list::before {
+  content: "";
+  display: block;
+  width: 67%;
+  min-height: 256px;
+
+  background-image: url("../img/item-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.features-list::after {
+  content: "";
+  display: block;
+  order: 1;
+  width: 67%;
+  min-height: 256px;
+
+  background-image: url("../img/item-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .feature-item {
+  width: 33%;
+  min-height: 256px;
+
   text-align: center;
 }
 
+.feature-item:first-child {
+  order: -1;
+}
+
+.feature-item:nth-child(2) {
+  width: 100%;
+}
+
+.feature-item:nth-child(3) {
+  order: 2;
+}
+
+.feature-item:nth-child(4) {
+  order: 3;
+}
+
+.feature-item:nth-child(5) {
+  order: 4;
+}
+
+.feature-item:nth-child(6) {
+  order: 5;
+}
+
 .feature-item h3 {
+  margin: 0 0;
+  margin-top: 50px;
+  padding: 0 0;
+
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -179,6 +254,12 @@ a.site-nav-current:active {
   color: #ffffff;
 }
 
+.feature-item p {
+  margin: 0 0;
+  margin-top: 32px;
+  padding: 0 40px;
+}
+
 .feature-item-blue {
   background-color: #81b3d2;
 }
@@ -187,8 +268,51 @@ a.site-nav-current:active {
   background-color: #eeeeee;
 }
 
-.feature-item-white {
+.extra-features .feature-item {
+  width: 33%;
+  min-height: 330px;
+
   background-color: #ffffff;
+}
+
+.extra-features .feature-item h3 {
+  margin-top: 0;
+}
+
+.feature-item-living::before {
+  content: "";
+  display: block;
+  margin: 60px auto 32px;
+  width: 75px;
+  height: 75px;
+
+  background-image: url("../img/icon-1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.feature-item-food::before {
+  content: "";
+  display: block;
+  margin: 60px auto 32px;
+  width: 75px;
+  height: 75px;
+
+  background-image: url("../img/icon-3.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.feature-item-souvenirs::before {
+  content: "";
+  display: block;
+  margin: 60px auto 32px;
+  width: 75px;
+  height: 75px;
+
+  background-image: url("../img/icon-2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .hotels {
