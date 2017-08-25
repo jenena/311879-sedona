@@ -316,10 +316,19 @@ a.site-nav-current:active {
 }
 
 .hotels {
+  margin: 0 0;
+  padding: 0 0;
+  padding-top: 55px;
+
+  text-align: center;
+
   background-color: #ffffff;
 }
 
 .hotels h2 {
+  margin: 0 0;
+  padding: 0 0;
+
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -327,10 +336,21 @@ a.site-nav-current:active {
 }
 
 .hotels p {
+  margin: 30px auto 50px;
+  padding: 0 0;
+  width: 440px;
+
   line-height: 26px;
 }
 
 a.hotel-search {
+  display: block;
+  width: 568px;
+  min-height: 20px;
+  margin: 0 auto;
+  padding: 33px 0;
+  vertical-align: middle;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -348,6 +368,26 @@ a.hotel-search:active {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;
+}
+
+.map {
+  position: relative;
+  margin: 0 0;
+  padding: 0 0;
+  min-width: 768px;
+  max-width: 1200px;
+  min-height: 473px;
+  text-align: center;
+}
+
+.map img {
+  display: block;
+  position: absolute;
+  min-width: 768px;
+  max-width: 1200px;
+  left: 50%;
+  margin-left: -600px;
+  overflow: hidden;
 }
 
 .container {
@@ -542,6 +582,7 @@ footer {
   min-width: 768px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 0;
 
   background-color: rgba(254, 254, 254, 0.9);
 }
@@ -636,6 +677,10 @@ footer {
 }
 
 .modal-search {
+  margin: 0 auto;
+  padding: 0 0;
+  width: 568px;
+
   line-height: 26px;
   font-weight: 700;
   color: #000000;
@@ -664,6 +709,10 @@ footer {
 }
 
 .modal-button {
+  width: 458px;
+  margin: 0 auto;
+  padding: 19px 0;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
