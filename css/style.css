@@ -13,7 +13,9 @@ body {
   background-color: #f2f2f2;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -22,12 +24,20 @@ body {
   border: 0;
   padding: 0;
 
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 header {
@@ -111,7 +121,7 @@ a.site-nav-current:active {
 
 .intro {
   text-align: center;
-  padding-bottom: 52px;
+  padding-bottom: 50px;
 
   background-color: #ffffff;
 }
@@ -119,7 +129,7 @@ a.site-nav-current:active {
 .intro b {
   display: block;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding: 0 0;
   width: 450px;
 
@@ -140,8 +150,8 @@ a.site-nav-current:active {
   display: block;
   min-width: 768px;
   max-width: 1200px;
-  height: 510px;
-  margin-bottom: 63px;
+  height: 508px;
+  margin-bottom: 60px;
 
   background-color: #81b3d2;
   background-image: url("../img/intro-text.png"),
@@ -192,6 +202,7 @@ a.site-nav-current:active {
   background-image: url("../img/item-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .features-list::after {
@@ -204,6 +215,7 @@ a.site-nav-current:active {
   background-image: url("../img/item-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .feature-item {
@@ -238,9 +250,9 @@ a.site-nav-current:active {
 }
 
 .feature-item h3 {
-  margin: 50px auto 0;
+  margin: 45px auto 25px;
   padding: 0 0;
-  width: 160px;
+  max-width: 160px;
 
   font-style: normal;
   font-weight: bold;
@@ -255,9 +267,14 @@ a.site-nav-current:active {
 }
 
 .feature-item p {
-  margin: 0 0;
-  margin-top: 32px;
-  padding: 0 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 0;
+  max-width: 305px;
+}
+
+.feature-item-grey p {
+  max-width: 270px;
 }
 
 .feature-item-blue {
@@ -318,7 +335,7 @@ a.site-nav-current:active {
 .hotels {
   margin: 0 0;
   padding: 0 0;
-  padding-top: 55px;
+  padding-top: 50px;
 
   text-align: center;
 
@@ -336,11 +353,11 @@ a.site-nav-current:active {
 }
 
 .hotels p {
-  margin: 30px auto 50px;
+  margin: 25px auto 45px;
   padding: 0 0;
   width: 440px;
 
-  line-height: 26px;
+  line-height: 24px;
 }
 
 a.hotel-search {
@@ -348,7 +365,7 @@ a.hotel-search {
   width: 568px;
   min-height: 20px;
   margin: 0 auto;
-  padding: 33px 0;
+  padding: 30px 0;
   vertical-align: middle;
 
   font-size: 21px;
@@ -645,6 +662,7 @@ footer {
 
 .footer-social ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0 0;
   margin: 0 0;
@@ -662,33 +680,26 @@ footer {
 }
 
 .social-button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
 
   background-color: #81b3d2;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
 }
 
-.social-button-tw {
-  background-image: url("../img/twitter.svg");
-}
-
-.social-button-fb {
-  background-image: url("../img/fb-icon.svg");
-}
-
-.social-button-yt {
-  background-image: url("../img/youtube.svg");
-}
-
-.social-button:hover {
+.social-button:hover,
+.social-button:focus {
   background-color:  #669ec0;
 }
 
 .social-button:active {
   background-color: #5496bd;
+}
+
+.social-button:active path {
+  opacity: 0.3;
 }
 
 .footer-copyright {
@@ -719,6 +730,7 @@ footer {
   margin: 0 auto;
   padding: 55px 0;
   width: 568px;
+  min-height: 285px;
 
   line-height: 26px;
   font-weight: 700;
@@ -727,9 +739,62 @@ footer {
   background-color: #ffffff;
 }
 
+.login-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0;
+  padding: 0 55px;
+}
+
+.login-form p {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 458px;
+  margin: 0 0;
+  margin-bottom: 30px;
+  padding: 0 0;
+}
+
+.login-form .half-width {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 458px;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.login-form .half-width p {
+  max-width: 225px;
+  margin-bottom: 0;
+}
+
+.login-form .half-width p:last-child {
+  max-width: 175px;
+  padding-left: 50px;
+}
+
+.login-form input[type="text"] {
+  width: 334px;
+}
+
+.login-form input[type="number"] {
+  width: 102px;
+}
+
 .login-form input[type="text"],
 .login-form input[type="number"] {
-  margin-bottom: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 0;
 
   font: inherit;
   color: #000000;
@@ -749,9 +814,36 @@ footer {
   border-color: #e5e5e5;
 }
 
+.calendar {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  width: 21px;
+  height: 22px;
+  margin: 0 0;
+  padding: 0 0;
+
+  background: none;
+  border: none;
+}
+
+.calendar svg {
+  fill: #a9a9a9;
+}
+
+.calendar svg:hover,
+.calendar svg:focus {
+  fill: #000000;
+}
+
+.calendar svg:active {
+  fill: #81b3d2;
+}
+
 .modal-button {
   width: 458px;
-  margin: 0 auto;
+  margin: 0 0;
+  margin-top: 55px;
   padding: 19px 0;
 
   font-size: 21px;
