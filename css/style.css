@@ -269,7 +269,7 @@ a.site-nav-current:active {
 .feature-item p {
   margin: 0 auto;
   margin-bottom: 20px;
-  padding: 0 0;
+  padding: 0 5%;
   max-width: 305px;
 }
 
@@ -299,7 +299,7 @@ a.site-nav-current:active {
 .feature-item-living::before {
   content: "";
   display: block;
-  margin: 60px auto 32px;
+  margin: 60px auto 25px;
   width: 75px;
   height: 75px;
 
@@ -311,7 +311,7 @@ a.site-nav-current:active {
 .feature-item-food::before {
   content: "";
   display: block;
-  margin: 60px auto 32px;
+  margin: 60px auto 25px;
   width: 75px;
   height: 75px;
 
@@ -323,7 +323,7 @@ a.site-nav-current:active {
 .feature-item-souvenirs::before {
   content: "";
   display: block;
-  margin: 60px auto 32px;
+  margin: 60px auto 25px;
   width: 75px;
   height: 75px;
 
@@ -393,8 +393,8 @@ a.hotel-search:active {
   padding: 0 0;
   min-width: 768px;
   max-width: 1200px;
-  min-height: 473px;
-  text-align: center;
+  height: 593px;
+  overflow: hidden;
 }
 
 .map img {
@@ -404,7 +404,6 @@ a.hotel-search:active {
   max-width: 1200px;
   left: 50%;
   margin-left: -600px;
-  overflow: hidden;
 }
 
 .container {
@@ -413,10 +412,15 @@ a.hotel-search:active {
   max-width: 1200px;
 }
 
+.hotels-container {
+  margin-bottom: 120px;
+}
+
 .filter {
   display: flex;
   justify-content: left;
-  padding: 29px 6% 0;
+  padding: 27px 6% 0;
+  min-height: 190px;
 
   color: #ffffff;
 
@@ -438,12 +442,12 @@ a.hotel-search:active {
 
 .filter fieldset:nth-of-type(2) {
   width: 160px;
-  margin-left: 10%;
+  margin-left: 9%;
 }
 
 .filter fieldset:last-of-type {
   margin-left: auto;
-  width: 28%;
+  width: 30%;
 }
 
 .filter ul {
@@ -464,20 +468,109 @@ a.hotel-search:active {
   color: #6a6a6a;
 }
 
-.prices {
+.filter-range legend {
+  margin-bottom: 10px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  height: 32px;
   min-width: 218px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
 
-.prices input {
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  /*padding-left: 9px;*/
+
+  font-size: 14px;
+  line-height: 32px;
+  vertical-align: top;
   color: #ffffff;
+
+  cursor: pointer;
+}
+
+.price-controls input {
+  width: 30px;
+  margin: 0 0;
+
+  color: inherit;
+  font: inherit;
 
   background: none;
   border: none;
 }
 
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
 .filter-button {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
@@ -499,7 +592,7 @@ a.hotel-search:active {
   display: flex;
   align-items: baseline;
   margin: 0 0;
-  padding: 33px 6%;
+  padding: 30px 6%;
 
   color: #000000;
   border-bottom: 1px solid #e5e5e5;
@@ -531,7 +624,10 @@ a.hotel-search:active {
   margin-right: 32px;
 
   color: rgba(0, 0, 0, 0.3);
-  border-bottom: 1px dotted #81b3d2;
+  background: linear-gradient(to right, #81b3d2, #81b3d2 50%, transparent 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 3px 1px;
 }
 
 .sorting a:first-of-type {
@@ -541,17 +637,20 @@ a.hotel-search:active {
 .sorting a:hover,
 .sorting a:focus {
   color: #81b3d2;
-  border-bottom: 1px dotted #81b3d2;
+  background: linear-gradient(to right, #81b3d2, #81b3d2 50%, transparent 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 3px 1px;
 }
 
 .sorting a:active {
   color: #000000;
-  border-bottom: none;
+  background: none;
 }
 
 a.sorting-active {
   color: #81b3d2;
-  border-bottom: none;
+  background: none;
 }
 
 .catalog-list {
@@ -566,20 +665,37 @@ a.sorting-active {
 }
 
 .catalog-item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   margin: 0 0;
   padding: 0 6% 0;
-  width: 100%;
+  width: 88%;
+  min-height: 150px;
 
   border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog-item h3 {
   margin: 0 0;
+  margin-top: 25px;
+  margin-bottom: 10px;
   padding: 0 0;
+  padding-left: 166px;
 
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.catalog-item-image {
+  position: absolute;
+  width: 135px;
+  height: 90px;
+  left: 72px;
+  top: 30px;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 .catalog-item a {
@@ -595,8 +711,30 @@ a.sorting-active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.catalog-item-price {
+  display: flex;
+  justify-content: space-between;
+  width: 182px;
+  margin: 0 0;
+  margin-bottom: 16px;
+  padding: 0 0;
+  padding-left: 166px;
+}
+
+.buttons-wrapper {
+  margin: 0 0;
+  padding: 0 0;
+  padding-left: 166px;
+
+  font-size: 0;
+}
+
 .catalog-item .button {
+  margin: 0 0;
+  padding: 4px 17px;
+
   color: #ffffff;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -608,36 +746,71 @@ a.sorting-active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-more {
+.catalog-item .button-more {
+  margin-right: 6px;
+
   background-color: #81b3d2;
 }
 
-.button-more:hover {
+.catalog-item .button-more:hover {
   background-color: #669ec0;
 }
 
-.button-book {
+.catalog-item .button-book {
   background-color: #766357;
 }
 
-.button-book:hover {
+.catalog-item .button-book:hover {
   background-color: #604e43;
 }
 
+.raiting-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px 0;
+  margin: 0 0;
+}
+
+.catalog-item-stars {
+  margin: 0 0;
+  padding: 0 0;
+}
+
 .catalog-item-rating {
+  margin: 0 0;
+  padding: 0 0;
+  min-width: 110px;
+  vertical-align: middle;
+  text-align: center;
+
   color: #666666;
+  line-height: 27px;
 
   background-color: #f2f2f2;
 }
 
+.footer-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 0;
+  min-height: 0;
+  min-width: 768px;
+  max-width: 1200px;
+}
+
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 120px;
-  min-width: 768px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 0;
+  /*margin-left: -50%;*/
   padding: 0 0;
 
   background-color: rgba(254, 254, 254, 0.9);
@@ -771,37 +944,82 @@ footer {
   padding: 0 0;
 }
 
-.login-form .half-width p {
-  max-width: 225px;
-  margin-bottom: 0;
+.login-form .half-width-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0;
+  padding: 0 0;
+  width: 226px;
 }
 
-.login-form .half-width p:last-child {
-  max-width: 175px;
+.login-form .half-width-wrapper:last-child {
+  max-width: 179px;
   padding-left: 50px;
 }
 
-.login-form input[type="text"] {
+.number-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0;
+  margin: 0 0;
+  font-size: 0;
+}
+
+.button-number {
+  width: 38px;
+  height: 38px;
+  padding: 0 0;
+  margin: 0 0;
+
+  font: inherit;
+  font-size: 26px;
+  line-height: 26px;
+  color: #a9a9a9;
+
+  background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+}
+
+.button-number:hover,
+.button-number:focus {
+  color: #000000;
+}
+
+.button-number:active {
+  color: #81b3d2;
+}
+
+.date-in,
+.date-out {
   width: 334px;
 }
 
-.login-form input[type="number"] {
-  width: 102px;
-}
-
-.login-form input[type="text"],
-.login-form input[type="number"] {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 12px;
+.login-form input[type="text"] {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 7px;
   padding-right: 0;
+  margin: 0 0;
 
   font: inherit;
+  font-size: 14px;
+  line-height: 26px;
   color: #000000;
   text-transform: uppercase;
 
   background-color: #f2f2f2;
   border: 2px solid #f2f2f2;
+}
+
+.login-form input[type="text"].adult-number,
+.login-form input[type="text"].children-number {
+  width: 34px;
+  text-align: center;
+  padding-left: 0;
 }
 
 .login-form input:hover {
@@ -844,7 +1062,7 @@ footer {
   width: 458px;
   margin: 0 0;
   margin-top: 55px;
-  padding: 19px 0;
+  padding: 16px 0;
 
   font-size: 21px;
   line-height: 26px;
