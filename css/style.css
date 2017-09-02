@@ -641,6 +641,8 @@ a.hotel-search:active {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
+  text-align: center;
+  width: 59px;
 
   font-size: 14px;
   line-height: 21px;
