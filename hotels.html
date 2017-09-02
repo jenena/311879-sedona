@@ -28,16 +28,25 @@
             <legend>Инфраструктура:</legend>
             <ul>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
-                <label for="pool">Бассейн</label>
+                <label for="pool">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
+                  <span class="checkbox-indicator"></span>
+                  Бассейн
+                </label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking">
-                <label for="parking">Парковка</label>
+                <label for="parking">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking">
+                  <span class="checkbox-indicator"></span>
+                  Парковка
+                </label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
-                <label for="wi-fi">Wi-Fi</label>
+                <label for="wi-fi">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                  <span class="checkbox-indicator"></span>
+                  Wi-Fi
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -45,16 +54,25 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
-                <label for="hotel">Гостиница</label>
+                <label for="hotel">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                  <span class="checkbox-indicator"></span>
+                  Гостиница
+                </label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
-                <label for="motel">Мотель</label>
+                <label for="motel">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
+                  <span class="checkbox-indicator"></span>
+                  Мотель
+                </label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartment" id="apartment" checked>
-                <label for="apartment">Апартаменты</label>
+                <label for="apartment">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartment" id="apartment" checked>
+                  <span class="checkbox-indicator"></span>
+                  Апартаменты
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -68,8 +86,8 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
+              <div class="range-toggle range-toggle-min" tabindex="0"></div>
+              <div class="range-toggle range-toggle-max" tabindex="0"></div>
             </div>
             <button type="submit" class="filter-button button">Показать</button>
           </fieldset>
@@ -77,6 +95,7 @@
         <div class="sorting">
           <h3>Найдено: 3</h3>
           <p>Сортировка: <a class="sorting-active" href="#">по цене</a> <a href="#">по типу</a> <a href="#">по рейтингу</a></p>
+          <p class="arrows"><button class="sort-arrow arrow-top" type="button">Сортировать по порядку</button><button class="sort-arrow arrow-bottom arrow-active" type="button">Сортировать в обратном порядке</button></p>
         </div>
         <ul class ="catalog-list">
           <li class="catalog-item">
@@ -96,12 +115,9 @@
               </div>
             </div>
             <div class="raiting-wrapper">
-              <p class="catalog-item-stars">
-                <img src="img/star.svg" width="18" height="17" alt="*">
-                <img src="img/star.svg" width="18" height="17" alt="*">
-                <img src="img/star.svg" width="18" height="17" alt="*">
-                <img src="img/star.svg" width="18" height="17" alt="*">
-              </p>
+              <div class="catalog-item-stars four-stars">
+                4 звезды
+              </div>
               <p class="catalog-item-rating">
                 Рейтинг: 8,5
               </p>
@@ -124,10 +140,8 @@
               </div>
             </div>
             <div class="raiting-wrapper">
-              <p class="catalog-item-stars">
-                <img src="img/star.svg" width="18" height="17" alt="*">
-                <img src="img/star.svg" width="18" height="17" alt="*">
-                <img src="img/star.svg" width="18" height="17" alt="*">
+              <p class="catalog-item-stars three-stars">
+                3 звезды
               </p>
               <p class="catalog-item-rating">
                 Рейтинг: 8,9
@@ -151,9 +165,8 @@
               </div>
             </div>
             <div class="raiting-wrapper">
-              <p class="catalog-item-stars">
-                <img src="img/star.svg" width="18" height="17" alt="*">
-                <img src="img/star.svg" width="18" height="17" alt="*">
+              <p class="catalog-item-stars two-stars">
+                2 звезды
               </p>
               <p class="catalog-item-rating">
                 Рейтинг: 9,2
