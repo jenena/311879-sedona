@@ -173,7 +173,7 @@ a.site-nav-current:active {
 
 .features-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   min-width: 768px;
   max-width: 1200px;
@@ -186,7 +186,7 @@ a.site-nav-current:active {
 
 .extra-features {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   min-width: 768px;
   max-width: 1200px;
   margin: 0 auto;
@@ -304,9 +304,9 @@ a.site-nav-current:active {
 .feature-item-living::before {
   content: "";
   display: block;
-  margin: 60px auto 25px;
+  margin: 60px auto 28px;
   width: 75px;
-  height: 75px;
+  height: 72px;
 
   background-image: url("../img/icon-1.svg");
   background-size: contain;
@@ -316,9 +316,9 @@ a.site-nav-current:active {
 .feature-item-food::before {
   content: "";
   display: block;
-  margin: 60px auto 25px;
+  margin: 60px auto 30px;
   width: 75px;
-  height: 75px;
+  height: 70px;
 
   background-image: url("../img/icon-3.svg");
   background-size: contain;
@@ -328,9 +328,9 @@ a.site-nav-current:active {
 .feature-item-souvenirs::before {
   content: "";
   display: block;
-  margin: 60px auto 25px;
-  width: 75px;
-  height: 75px;
+  margin: 55px auto 29px;
+  width: 64px;
+  height: 76px;
 
   background-image: url("../img/icon-2.svg");
   background-size: contain;
@@ -445,7 +445,7 @@ a.hotel-search:active {
 }
 
 .filter fieldset:first-of-type {
-  width: 160px;
+  width: 155px;
 }
 
 .filter fieldset:nth-of-type(2) {
@@ -569,7 +569,8 @@ a.hotel-search:active {
 .price-controls label {
   display: inline-block;
   text-align: center;
-  width: 50%;
+  width: 40%;
+  padding-left: 10%;
 
   font-size: 14px;
   line-height: 32px;
@@ -579,8 +580,13 @@ a.hotel-search:active {
   cursor: pointer;
 }
 
+.price-controls .min-price {
+  width: 35%;
+  padding-left: 15%;
+}
+
 .price-controls input {
-  width: 30px;
+  width: 50px;
   margin: 0 0;
 
   color: inherit;
@@ -642,7 +648,7 @@ a.hotel-search:active {
   margin: 0 auto;
   padding: 6px 35px;
   text-align: center;
-  width: 59px;
+  width: 65px;
 
   font-size: 14px;
   line-height: 21px;
@@ -813,7 +819,7 @@ button.arrow-bottom {
 .catalog-item h3 {
   margin: 0 0;
   margin-top: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   padding: 0 0;
   padding-left: 166px;
 
@@ -906,7 +912,7 @@ button.arrow-bottom {
   align-items: flex-end;
   padding: 30px 0;
   margin: 0 0;
-  height: 91px;
+  height: 90px;
 }
 
 .catalog-item-stars {
@@ -918,19 +924,19 @@ button.arrow-bottom {
   font-size: 0;
 
   background-image: url(../img/star.svg);
-  background-repeat: repeat-x;
+  background-repeat: space;
 }
 
 .catalog-item .four-stars {
-  width: 72px;
+  width: 86px;
 }
 
 .catalog-item .three-stars {
-  width: 54px;
+  width: 65px;
 }
 
 .catalog-item .two-stars {
-  width: 36px;
+  width: 41px;
 }
 
 .catalog-item-rating {
@@ -974,6 +980,9 @@ footer {
   width: 33%;
   text-align: center;
   margin: 0 0;
+  margin-left: 2px;
+  margin-right: -2px;
+  margin-top: -5px;
 
   font-size: 21px;
   line-height: 26px;
@@ -1039,7 +1048,7 @@ footer {
 .logo-htmlacademy {
   width: 115px;
   height: 41px;
-  margin-left: 6px;
+  margin-left: 4px;
   vertical-align: middle;
 
   fill: #231f20;
