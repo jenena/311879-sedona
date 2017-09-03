@@ -403,6 +403,10 @@ a.hotel-search:active {
   overflow: hidden;
 }
 
+.map iframe {
+  border: 0;
+}
+
 .map img {
   display: block;
   position: absolute;
