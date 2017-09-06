@@ -71,6 +71,7 @@ header {
   justify-content: space-between;
   align-items: center;
   min-height: 56px;
+  height: 30px;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0 0;
@@ -179,6 +180,8 @@ a.site-nav-current:active {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 0;
+  z-index: 2;
+  position: relative;
 
   list-style: none;
   background-color: #eeeeee;
@@ -341,6 +344,8 @@ a.site-nav-current:active {
   margin: 0 0;
   padding: 0 0;
   padding-top: 50px;
+  position: relative;
+  z-index: 2;
 
   text-align: center;
 
@@ -544,6 +549,7 @@ a.hotel-search:active {
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   height: 32px;
   min-width: 218px;
@@ -573,6 +579,7 @@ a.hotel-search:active {
 .price-controls label {
   display: inline-block;
   text-align: center;
+  vertical-align: middle;
   width: 40%;
   padding-left: 10%;
 
@@ -591,8 +598,11 @@ a.hotel-search:active {
 
 .price-controls input {
   width: 50px;
+  min-height: 30px;
   margin: 0 0;
 
+  font-size: 14px;
+  line-height: 14px;
   color: inherit;
   font: inherit;
 
@@ -842,17 +852,17 @@ button.arrow-bottom {
   padding: 0 0;
 }
 
-.catalog-item a {
+.catalog-item h3 {
   color: #000000;
 }
 
-.catalog-item a:hover,
-.catalog-item a:focus {
+.catalog-item h3:hover,
+.catalog-item h3:focus {
   color: #81b3d2;
   outline: none;
 }
 
-.catalog-item a:active {
+.catalog-item h3:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -897,7 +907,8 @@ button.arrow-bottom {
   background-color: #81b3d2;
 }
 
-.catalog-item .button-more:hover {
+.catalog-item .button-more:hover,
+.catalog-item .button-more:focus {
   background-color: #669ec0;
 }
 
@@ -905,7 +916,8 @@ button.arrow-bottom {
   background-color: #766357;
 }
 
-.catalog-item .button-book:hover {
+.catalog-item .button-book:hover,
+.catalog-item .button-book:focus {
   background-color: #604e43;
 }
 
@@ -973,6 +985,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   min-height: 120px;
+  height: 50px;
   width: 100%;
   margin: 0 0;
   padding: 0 0;
@@ -1069,6 +1082,16 @@ footer {
   opacity: 0.3;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-500px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-search {
   position: absolute;
   top: 2169px;
@@ -1078,19 +1101,26 @@ footer {
   padding: 55px 0;
   width: 568px;
   min-height: 285px;
+  z-index: 1;
 
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 
   background-color: #ffffff;
+  animation: bounce 0.6s;
+  transition-timing-function: ease-out;
+}
+
+.modal-hide {
+  display: none;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 0;
   padding: 0 55px;
 }
@@ -1179,6 +1209,8 @@ footer {
   padding-left: 7px;
   padding-right: 0;
   margin: 0 0;
+  margin-left: auto;
+  height: 26px;
 
   font: inherit;
   font-size: 14px;
