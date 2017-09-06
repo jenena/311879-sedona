@@ -975,6 +975,7 @@ button.arrow-bottom {
   min-height: 0;
   min-width: 768px;
   max-width: 1200px;
+  pointer-events: none;
 }
 
 footer {
@@ -1000,6 +1001,7 @@ footer {
   margin-left: 2px;
   margin-right: -2px;
   margin-top: -5px;
+  pointer-events: auto;
 
   font-size: 21px;
   line-height: 26px;
@@ -1038,6 +1040,7 @@ footer {
   justify-content: center;
   width: 46px;
   height: 48px;
+  pointer-events: auto;
 
   background-color: #81b3d2;
 }
@@ -1062,11 +1065,16 @@ footer {
   margin: 0 0;
 }
 
+.footer-copyright b {
+  pointer-events: auto;
+}
+
 .logo-htmlacademy {
   width: 115px;
   height: 41px;
   margin-left: 4px;
   vertical-align: middle;
+  pointer-events: auto;
 
   fill: #231f20;
 }
