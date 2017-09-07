@@ -195,8 +195,6 @@ a.site-nav-current:active {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 0;
-  z-index: 2;
-  position: relative;
 
   list-style: none;
   background-color: #eeeeee;
@@ -376,7 +374,6 @@ a.site-nav-current:active {
   padding: 0 0;
   padding-top: 50px;
   position: relative;
-  z-index: 2;
 
   text-align: center;
 
@@ -707,7 +704,7 @@ a.hotel-search:active {
   margin: 0 auto;
   padding: 6px 35px;
   text-align: center;
-  width: 65px;
+  min-width: 65px;
 
   font-size: 14px;
   line-height: 21px;
@@ -1191,37 +1188,57 @@ footer {
 
 @-webkit-keyframes bounce {
   0% {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateX(-5000px);
+            transform: translateX(-5000px);
+  }
+
+  70% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @keyframes bounce {
   0% {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateX(-5000px);
+            transform: translateX(-5000px);
+  }
+
+  70% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 .modal-search {
   position: absolute;
-  top: 2169px;
+  bottom: -397px;
   left: 50%;
   margin: 0 0;
   margin-left: -284px;
   padding: 55px 0;
   width: 568px;
-  min-height: 285px;
+  min-height: 287px;
   z-index: 1;
 
   line-height: 26px;
@@ -1396,12 +1413,12 @@ footer {
   padding-left: 0;
 }
 
-.login-form input:hover {
+.login-form input[type="text"]:hover {
   background-color: #ebebeb;
   border-color: #ebebeb;
 }
 
-.login-form input:focus {
+.login-form input[type="text"]:focus {
   background-color: #ffffff;
   border-color: #e5e5e5;
   outline: none;
